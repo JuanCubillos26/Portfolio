@@ -1,6 +1,6 @@
 import './Proyectos.css'
 import ProjectCard from './ProjectCard'
-import Creacion from '../../assets/creacion.png'
+import Creacion from '../../assets/Creacion.png'
 import Register from '../../assets/Register.png'
 import Login from '../../assets/Login.png'
 import Update from '../../assets/Update.png'
