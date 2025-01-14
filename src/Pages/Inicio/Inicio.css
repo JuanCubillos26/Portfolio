@@ -134,6 +134,6 @@ p {
     top: 20%; /* Asegurarse de que los iconos estén más cerca de la parte superior */
     justify-content: center;
     display: flex;
-    width: 80%;
+    width: 90%;
   }
 }

@@ -34,7 +34,7 @@ const Navbar = () => {
         </li>
         <li>
           <Link to="/Proyects" onClick={toggleMenu}>
-            Proyects
+            Projects
           </Link>
         </li>
       </ul>

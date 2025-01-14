@@ -4,7 +4,7 @@ import { createHashRouter, Outlet, RouterProvider } from 'react-router-dom'
 import './index.css'
 import Educacion from './Pages/Educacion/Educacion.tsx'
 import Inicio from './Pages/Inicio/Inicio.tsx'
-import Proyectos from './Pages/Proyectos/Proyectos.tsx'
+import Proyectos from './Pages/Proyectos/ProjectsCard.tsx'
 import SobreMi from './Pages/Sobre mi/SobreMi.tsx'
 import Navbar from './components/Navbar/navbar.tsx'
 
