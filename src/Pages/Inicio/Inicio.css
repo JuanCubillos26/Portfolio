@@ -1,0 +1,138 @@
+/* Contenedor principal */
+.container {
+  display: flex;
+  flex-direction: column; /* Apilar elementos verticalmente */
+  justify-content: center; /* Centrar verticalmente */
+  align-items: center; /* Centrar horizontalmente */
+  width: 100%; /* Ocupa todo el ancho */
+  height: 90vh; /* Ocupa toda la altura de la ventana */
+  padding: 10px; /* Agregar espacio en los bordes */
+  box-sizing: border-box; /* Incluye el padding en el cálculo de la altura/anchura */
+}
+
+/* Estilo del título */
+.tittle {
+  font-size: 3rem;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Texto animado */
+.textElement {
+  font-size: 3rem;
+  color: #ff4a57;
+  text-align: center;
+}
+
+/* Párrafo */
+p {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-top: 20px;
+  text-align: center;
+  max-width: 600px;
+}
+
+/* Iconos de redes sociales */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.social-icon {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Header Image */
+.header-image {
+  flex: 1;
+  max-width: 300px;
+  width: 100%;
+  border-radius: 60%;
+  object-fit: cover;
+  margin: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Contenedor de la imagen y los iconos de tecnología */
+.tech-icons {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  animation: float 4s ease-in-out infinite;
+}
+
+.tech-icon {
+  font-size: 2.5rem;
+  color: white;
+  margin: 0 7px;
+  transition: transform 0.3s ease;
+}
+
+.tech-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Animación de flotación */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Ajustes para pantallas móviles */
+@media (max-width: 768px) {
+  /* Ajustar el tamaño del título y texto */
+  .tittle {
+    font-size: 1.8rem;
+  }
+
+  .textElement {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin-top: 15px;
+  }
+
+  /* Ajustar el tamaño de los iconos de redes sociales */
+  .social-icons {
+    margin-top: 20px;
+  }
+
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    margin: 8px;
+  }
+
+  /* Ajustar la imagen del encabezado */
+  .header-image {
+    max-width: 200px;
+    margin: 10px;
+  }
+
+  /* Ajustar la posición de los iconos de tecnología */
+  .tech-icons {
+    left: 70px;
+    top: 20%; /* Asegurarse de que los iconos estén más cerca de la parte superior */
+    justify-content: center;
+    display: flex;
+  }
+}

@@ -1,0 +1,133 @@
+/* Estilos principales */
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  color: #ff4a57; /* Texto blanco */
+  min-height: 100vh;
+}
+
+.timeline-title {
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.timeline-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+.timeline-line {
+  position: absolute;
+  background-color: #ff4a57; /* Línea blanca */
+}
+
+/* Eventos distribuidos horizontalmente */
+.timeline-events {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 30px;
+}
+
+.timeline-event {
+  position: relative;
+  text-align: center;
+  font-size: 16px;
+  color: white; /* Texto blanco */
+}
+
+.timeline-event::before {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #ff4a57;
+  border-radius: 50%;
+  top: 150%; /* Centrado verticalmente */
+  left: 50%; /* Centrado horizontalmente */
+  transform: translate(-50%, -50%);
+}
+
+/* Línea horizontal (pantallas grandes) */
+.timeline-line {
+  width: 100%;
+  height: 2px;
+  top: 150%;
+}
+
+/* Vista móvil: línea vertical */
+@media (max-width: 768px) {
+  .timeline-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timeline-line {
+    width: 1px;
+    height: 1;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .timeline-events {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .timeline-event::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+    top: 150%; /* Centrado verticalmente */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translate(-50%, -50%);
+  }
+}
+
+.skills-title {
+  margin: 40px;
+  font-weight: bold;
+  color: #ff4a57;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+}
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee {
+  display: flex;
+  animation: marquee 15s linear infinite;
+  width: max-content;
+  gap: 70px;
+  font-size: 90px;
+}
+
+.marquee-item {
+  color: white;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

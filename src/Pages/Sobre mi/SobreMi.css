@@ -1,0 +1,193 @@
+/* Contenedor principal */
+.about-contact-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 40px;
+  padding: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 90vh;
+}
+
+/* Sección About */
+.about-section,
+.contact-section {
+  flex: 1;
+  max-width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.about-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ff4a57, #ff4a57);
+}
+
+.about-title {
+  font-weight: bold;
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.about-text {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.about-description {
+  font-size: 1.2rem;
+  color: white;
+  text-align: center;
+  line-height: 1.6;
+  font-family: sans-serif;
+}
+
+/* Botón de descarga */
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 25px;
+  border-radius: 8px;
+  background-color: #fafafa;
+  color: #ff4a57;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.download-btn:hover {
+  background-color: #42181b;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.download-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Sección Contact */
+.contact-form {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #ff4a57, #ff4a57);
+  padding: 40px;
+  color: #ffffff;
+  font-family: sans-serif;
+}
+
+.contact-title {
+  font-weight: bold;
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+  color: #ffffff;
+  font-family: sans-serif;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  font-size: 16px;
+  background-color: #ffffff;
+  font-family: sans-serif;
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+.form-button {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #fafafa;
+  color: #ff4a57;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+.form-button:hover {
+  background-color: #42181b;
+  color: #ffffff;
+}
+.send-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.send-icon {
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  margin-right: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .about-contact-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .about-section,
+  .contact-section {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title,
+  .contact-title {
+    font-size: 1.8rem;
+  }
+
+  .about-text {
+    font-size: 1.2rem;
+  }
+
+  .about-description {
+    font-size: 1rem;
+  }
+
+  .download-btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}

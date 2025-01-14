@@ -1,0 +1,76 @@
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Espacio entre logo y links */
+  align-items: center; /* Alinea verticalmente */
+  padding: 20px 20px;
+  background-color: #1f2031; /* Color del fondo */
+  color: #fff; /* Color del texto */
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar .logo span {
+  color: #ff4a57;
+}
+
+.nav-links {
+  list-style: none; /* Elimina los puntos de lista */
+  display: flex; /* Coloca los elementos en línea */
+  gap: 30px; /* Espacio entre links */
+  transition: transform 0.3s ease-in-out; /* Animación para menú móvil */
+}
+
+/* Elimina subrayados y ajusta color de los enlaces */
+.nav-links li a {
+  text-decoration: none; /* Quita el subrayado */
+  color: inherit; /* Usa el color del elemento padre */
+}
+
+.nav-links li a:hover {
+  color: #ff4a57; /* Cambia de color al pasar el mouse */
+  transition: ease 0.6s; /* Efecto de transición */
+}
+
+/* Botón del menú hamburguesa */
+.hamburger {
+  display: none; /* Solo se muestra en pantallas pequeñas */
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column; /* Cambia a vertical en pantallas pequeñas */
+    gap: 10px;
+    position: absolute;
+    top: 60px; /* Debajo de la navbar */
+    right: 0;
+    background-color: #212236; /* Fondo oscuro */
+    padding: 20px;
+    width: 200px; /* Ancho del menú desplegable */
+    height: auto;
+    transform: translateX(-300%); /* Oculta el menú fuera de la pantalla */
+    transition: ease 0.8s; /* Efecto de transición */
+    gap: 10px 0;
+  }
+
+  .nav-links.open {
+    transform: translateX(0%); /* Muestra el menú cuando está activo */
+    transition: ease 0.6s; /* Efecto de transición */
+  }
+
+  .hamburger {
+    display: block; /* Se muestra el ícono hamburguesa en pantallas pequeñas */
+  }
+}
+
+/* Estilo para el enlace activo */
+.nav-links .active {
+  font-weight: bold;
+  color: #ff4a57;
+  text-decoration: underline; /* Agrega subrayado al enlace activo */
+}
