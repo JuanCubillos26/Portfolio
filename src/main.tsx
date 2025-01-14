@@ -19,6 +19,7 @@ const router = createHashRouter([
   {
     element: <Layout />,
     children: [
+      { path: '/', element: <Inicio /> },
       { path: '/Portfolio', element: <Inicio /> },
       { path: '/Aboutme', element: <SobreMi /> },
       { path: '/Proyects', element: <Proyectos /> },
