@@ -17,6 +17,8 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: github-pages # Agrega esta línea para especificar el entorno
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
